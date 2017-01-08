@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/04 03:56:50 by tfontain          #+#    #+#             */
-/*   Updated: 2016/12/08 18:57:41 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/01/08 20:52:36 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int				ft_open_file(const char filename[])
 	{
 		ft_putstr("./fillit: ");
 		ft_putstr(filename);
-		ft_putstr(": No such file or directory");
+		ft_putstr(": No such file or directory\n");
 		exit(EXIT_FAILURE);
 	}
 	return (fd);

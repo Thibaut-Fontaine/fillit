@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 17:08:51 by tfontain          #+#    #+#             */
-/*   Updated: 2016/12/08 22:48:09 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/01/08 20:56:16 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void			ft_error(void)
 {
-	ft_putstr("error");
+	ft_putstr("error\n");
 	exit(EXIT_FAILURE);
 }
 
@@ -88,7 +88,7 @@ t_block			*ft_input(int argc, const char *argv[])
 
 	if (argc != 2)
 	{
-		ft_putstr("usage: ./fillit source_file");
+		ft_putstr("usage: ./fillit source_file\n");
 		exit(EXIT_FAILURE);
 	}
 	blocks = ft_open_read_close_file(argv[1]);
