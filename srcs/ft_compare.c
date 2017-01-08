@@ -6,13 +6,13 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/04 04:06:50 by tfontain          #+#    #+#             */
-/*   Updated: 2016/12/05 03:34:19 by tfontain         ###   ########.fr       */
+/*   Updated: 2016/12/08 18:47:46 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int				ft_istetriminos(t_block block)
+static int		ft_istetriminos(t_block block)
 {
 	int			k;
 	int			i;

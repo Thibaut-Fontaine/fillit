@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 17:08:51 by tfontain          #+#    #+#             */
-/*   Updated: 2016/12/05 03:31:25 by tfontain         ###   ########.fr       */
+/*   Updated: 2016/12/08 22:48:09 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,8 @@ t_block			ft_get_coordinates(char *str, t_block block)
 			block.array[count_hash].y = i / 5;
 			++count_hash;
 		}
-		else if (str[i] == '\n' && i != 4 && i != 9 && i != 14 && i != 19)
-			ft_error();
-		else if (str[i] != '.' && str[i] != '\n')
+		else if ((str[i] == '\n' && i != 4 && i != 9 && i != 14 && i != 19)
+				|| (str[i] != '.' && str[i] != '\n'))
 			ft_error();
 		++i;
 	}

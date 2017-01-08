@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 16:24:24 by tfontain          #+#    #+#             */
-/*   Updated: 2016/12/05 02:36:18 by tfontain         ###   ########.fr       */
+/*   Updated: 2016/12/08 18:52:41 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,16 @@ static char		**ft_init_result(char **result, size_t size)
 	while (k < size)
 		ft_memset(result[k++], '.', size);
 	return (result);
+}
+
+static void		ft_destroy_result(char **result, size_t size)
+{
+	size_t		k;
+
+	k = 0;
+	while (k < size)
+		free(result[k++]);
+	free(result);
 }
 
 /*
@@ -88,4 +98,5 @@ void			ft_print_result(t_block *blocks, t_coord *pos, size_t size)
 		ft_putchar('\n');
 		++k;
 	}
+	ft_destroy_result(result, size);
 }
